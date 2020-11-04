@@ -68,7 +68,10 @@ namespace SYSBA
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-
+            fUsuarioTrabajador f = new fUsuarioTrabajador();
+            f.IdUsuarioLog = this.IdUsuarioLog;
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

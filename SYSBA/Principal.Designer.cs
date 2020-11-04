@@ -32,6 +32,7 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.mCatalogos = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCargo = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDocumentoExpediente = new System.Windows.Forms.ToolStripMenuItem();
             this.btnEscuelaProcedencia = new System.Windows.Forms.ToolStripMenuItem();
             this.btnGrado = new System.Windows.Forms.ToolStripMenuItem();
             this.btnGradoEstudio = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +55,6 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.btnCerrarSesion = new System.Windows.Forms.ToolStripSplitButton();
             this.lblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnDocumentoExpediente = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +97,14 @@
             this.btnCargo.Text = "&Cargo";
             this.btnCargo.Click += new System.EventHandler(this.btnCargo_Click);
             // 
+            // btnDocumentoExpediente
+            // 
+            this.btnDocumentoExpediente.Image = ((System.Drawing.Image)(resources.GetObject("btnDocumentoExpediente.Image")));
+            this.btnDocumentoExpediente.Name = "btnDocumentoExpediente";
+            this.btnDocumentoExpediente.Size = new System.Drawing.Size(234, 22);
+            this.btnDocumentoExpediente.Text = "&Documentos para Expedientes";
+            this.btnDocumentoExpediente.Click += new System.EventHandler(this.btnDocumentoExpediente_Click);
+            // 
             // btnEscuelaProcedencia
             // 
             this.btnEscuelaProcedencia.Image = ((System.Drawing.Image)(resources.GetObject("btnEscuelaProcedencia.Image")));
@@ -136,7 +144,7 @@
             this.btnUsuarios.ImageTransparentColor = System.Drawing.Color.Black;
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(234, 22);
-            this.btnUsuarios.Text = "&Usuarios";
+            this.btnUsuarios.Text = "&Usuario (Trabajador)";
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // toolStripSeparator3
@@ -167,22 +175,22 @@
             this.btnCompras.Image = ((System.Drawing.Image)(resources.GetObject("btnCompras.Image")));
             this.btnCompras.ImageTransparentColor = System.Drawing.Color.Black;
             this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(122, 22);
-            this.btnCompras.Text = "&Compras";
+            this.btnCompras.Size = new System.Drawing.Size(190, 22);
+            this.btnCompras.Text = "&Expediente Trabajador";
             // 
             // btnVentas
             // 
             this.btnVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnVentas.Image")));
             this.btnVentas.ImageTransparentColor = System.Drawing.Color.Black;
             this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(122, 22);
+            this.btnVentas.Size = new System.Drawing.Size(190, 22);
             this.btnVentas.Text = "&Ventas";
             // 
             // btnAbonos
             // 
             this.btnAbonos.Image = ((System.Drawing.Image)(resources.GetObject("btnAbonos.Image")));
             this.btnAbonos.Name = "btnAbonos";
-            this.btnAbonos.Size = new System.Drawing.Size(122, 22);
+            this.btnAbonos.Size = new System.Drawing.Size(190, 22);
             this.btnAbonos.Text = "&Abonos";
             // 
             // mBachillerato
@@ -276,14 +284,6 @@
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(69, 51);
             this.lblUsuario.Text = "Usuario";
-            // 
-            // btnDocumentoExpediente
-            // 
-            this.btnDocumentoExpediente.Image = ((System.Drawing.Image)(resources.GetObject("btnDocumentoExpediente.Image")));
-            this.btnDocumentoExpediente.Name = "btnDocumentoExpediente";
-            this.btnDocumentoExpediente.Size = new System.Drawing.Size(234, 22);
-            this.btnDocumentoExpediente.Text = "&Documentos para Expedientes";
-            this.btnDocumentoExpediente.Click += new System.EventHandler(this.btnDocumentoExpediente_Click);
             // 
             // Principal
             // 

@@ -280,6 +280,7 @@
             this.Controls.Add(this.pnlBotones);
             this.Name = "Plantilla";
             this.Text = "Plantilla";
+            this.Load += new System.EventHandler(this.Plantilla_Load_1);
             this.pnlBotones.ResumeLayout(false);
             this.pnlDatos.ResumeLayout(false);
             this.pnlRegistros.ResumeLayout(false);

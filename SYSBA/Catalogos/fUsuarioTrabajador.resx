@@ -117,6 +117,39 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="nombreLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="label1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="primerApellidoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="segundoApellidoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="label2.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="fechaNacimientoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="label3.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="label4.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="tituloAcademicoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="emailLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="passwordLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnEliminar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -186,6 +219,18 @@
         HrAAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="bsDatos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>249, 18</value>
+  </metadata>
+  <metadata name="bsDatos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>249, 18</value>
+  </metadata>
+  <metadata name="sYSBADataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>345, 18</value>
+  </metadata>
+  <metadata name="sYSBADataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>345, 18</value>
+  </metadata>
   <data name="btnCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAA7BJREFUSEul
@@ -230,6 +275,30 @@
         /wA/TYvC5SaGowAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="cargoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 101</value>
+  </metadata>
+  <metadata name="cargoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 101</value>
+  </metadata>
+  <metadata name="gradoEstudioBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>606, 62</value>
+  </metadata>
+  <metadata name="gradoEstudioBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>606, 62</value>
+  </metadata>
+  <metadata name="sexoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>302, 62</value>
+  </metadata>
+  <metadata name="sexoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>302, 62</value>
+  </metadata>
+  <metadata name="rolBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>698, 23</value>
+  </metadata>
+  <metadata name="rolBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>698, 23</value>
+  </metadata>
   <metadata name="bnDatos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -276,22 +345,43 @@
   <data name="btnBuscar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
 </value>
   </data>
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>244, 17</value>
+    <value>119, 18</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>74</value>
+  </metadata>
+  <metadata name="vUsuarioTrabajadorTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>467, 23</value>
+  </metadata>
+  <metadata name="rolTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>843, 23</value>
+  </metadata>
+  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 62</value>
+  </metadata>
+  <metadata name="cargoTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>178, 101</value>
+  </metadata>
+  <metadata name="gradoEstudioTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>809, 62</value>
+  </metadata>
+  <metadata name="sexoTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>457, 62</value>
   </metadata>
 </root>

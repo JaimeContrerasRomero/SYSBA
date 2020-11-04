@@ -190,5 +190,10 @@ namespace SYSBA
             //}
             return resultado;
         }
+
+        private void Plantilla_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
