@@ -51,6 +51,10 @@ namespace SYSBA
                 {
                     ((MaskedTextBox)ctl).Clear();
                 }
+                if (ctl is DateTimePicker)
+                {
+                    ((DateTimePicker)ctl).Value = DateTime.Now;
+                }
                 if (validaND)
                 {
                     if (ctl is NumericUpDown)

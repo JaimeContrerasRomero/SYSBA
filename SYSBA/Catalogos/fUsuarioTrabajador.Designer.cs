@@ -72,6 +72,28 @@
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.pnlRegistros = new System.Windows.Forms.Panel();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrimerApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SegundoApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdTrabajador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdGradoEstudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GradoEstudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TituloAcademico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Secundaria = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Bachillerato = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.UsuarioSistema = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.UsuarioActivo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Activo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bnDatos = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -91,28 +113,6 @@
             this.cargoTableAdapter = new SYSBA.SYSBADataSetTableAdapters.CargoTableAdapter();
             this.gradoEstudioTableAdapter = new SYSBA.SYSBADataSetTableAdapters.GradoEstudioTableAdapter();
             this.sexoTableAdapter = new SYSBA.SYSBADataSetTableAdapters.SexoTableAdapter();
-            this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrimerApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SegundoApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UsuarioSistema = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.IdTrabajador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdGradoEstudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GradoEstudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TituloAcademico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Secundaria = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Bachillerato = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.UsuarioActivo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Activo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             nombreLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             primerApellidoLabel = new System.Windows.Forms.Label();
@@ -286,7 +286,7 @@
             this.pnlDatos.Controls.Add(this.groupBox2);
             this.pnlDatos.Controls.Add(this.groupBox1);
             this.pnlDatos.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlDatos.Location = new System.Drawing.Point(0, 310);
+            this.pnlDatos.Location = new System.Drawing.Point(0, 340);
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(926, 215);
             this.pnlDatos.TabIndex = 4;
@@ -378,8 +378,9 @@
             this.tituloAcademicoTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tituloAcademicoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsDatos, "TituloAcademico", true));
             this.tituloAcademicoTextBox.Location = new System.Drawing.Point(6, 131);
+            this.tituloAcademicoTextBox.Multiline = true;
             this.tituloAcademicoTextBox.Name = "tituloAcademicoTextBox";
-            this.tituloAcademicoTextBox.Size = new System.Drawing.Size(229, 20);
+            this.tituloAcademicoTextBox.Size = new System.Drawing.Size(229, 43);
             this.tituloAcademicoTextBox.TabIndex = 10;
             // 
             // cargoComboBox
@@ -440,7 +441,7 @@
             this.groupBox1.Size = new System.Drawing.Size(518, 215);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos Personales";
+            this.groupBox1.Text = "Datos Personales:";
             // 
             // passwordTextBox
             // 
@@ -536,7 +537,7 @@
             this.pnlRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRegistros.Location = new System.Drawing.Point(0, 68);
             this.pnlRegistros.Name = "pnlRegistros";
-            this.pnlRegistros.Size = new System.Drawing.Size(926, 242);
+            this.pnlRegistros.Size = new System.Drawing.Size(926, 272);
             this.pnlRegistros.TabIndex = 5;
             // 
             // dgvDatos
@@ -552,23 +553,23 @@
             this.IdUsuario,
             this.IdRol,
             this.Rol,
+            this.Sexo,
             this.Nombre,
             this.PrimerApellido,
             this.SegundoApellido,
             this.IdSexo,
-            this.Sexo,
+            this.FechaNacimiento,
             this.Email,
             this.Password,
-            this.UsuarioSistema,
             this.IdTrabajador,
             this.IdGradoEstudio,
             this.GradoEstudio,
             this.IdCargo,
             this.Cargo,
             this.TituloAcademico,
-            this.FechaNacimiento,
             this.Secundaria,
             this.Bachillerato,
+            this.UsuarioSistema,
             this.UsuarioActivo,
             this.Activo});
             this.dgvDatos.DataSource = this.bsDatos;
@@ -577,9 +578,194 @@
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.ReadOnly = true;
             this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDatos.Size = new System.Drawing.Size(926, 217);
+            this.dgvDatos.Size = new System.Drawing.Size(926, 247);
             this.dgvDatos.TabIndex = 7;
             this.dgvDatos.SelectionChanged += new System.EventHandler(this.dgvDatos_SelectionChanged);
+            // 
+            // IdUsuario
+            // 
+            this.IdUsuario.DataPropertyName = "IdUsuario";
+            this.IdUsuario.HeaderText = "IdUsuario";
+            this.IdUsuario.Name = "IdUsuario";
+            this.IdUsuario.ReadOnly = true;
+            this.IdUsuario.Visible = false;
+            this.IdUsuario.Width = 77;
+            // 
+            // IdRol
+            // 
+            this.IdRol.DataPropertyName = "IdRol";
+            this.IdRol.HeaderText = "IdRol";
+            this.IdRol.Name = "IdRol";
+            this.IdRol.ReadOnly = true;
+            this.IdRol.Visible = false;
+            this.IdRol.Width = 57;
+            // 
+            // Rol
+            // 
+            this.Rol.DataPropertyName = "Rol";
+            this.Rol.HeaderText = "Rol";
+            this.Rol.Name = "Rol";
+            this.Rol.ReadOnly = true;
+            this.Rol.Width = 48;
+            // 
+            // Sexo
+            // 
+            this.Sexo.DataPropertyName = "Sexo";
+            this.Sexo.HeaderText = "Sexo";
+            this.Sexo.Name = "Sexo";
+            this.Sexo.ReadOnly = true;
+            this.Sexo.Width = 56;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 69;
+            // 
+            // PrimerApellido
+            // 
+            this.PrimerApellido.DataPropertyName = "PrimerApellido";
+            this.PrimerApellido.HeaderText = "Primer Apellido";
+            this.PrimerApellido.Name = "PrimerApellido";
+            this.PrimerApellido.ReadOnly = true;
+            this.PrimerApellido.Width = 93;
+            // 
+            // SegundoApellido
+            // 
+            this.SegundoApellido.DataPropertyName = "SegundoApellido";
+            this.SegundoApellido.HeaderText = "Segundo Apellido";
+            this.SegundoApellido.Name = "SegundoApellido";
+            this.SegundoApellido.ReadOnly = true;
+            this.SegundoApellido.Width = 105;
+            // 
+            // IdSexo
+            // 
+            this.IdSexo.DataPropertyName = "IdSexo";
+            this.IdSexo.HeaderText = "IdSexo";
+            this.IdSexo.Name = "IdSexo";
+            this.IdSexo.ReadOnly = true;
+            this.IdSexo.Visible = false;
+            this.IdSexo.Width = 65;
+            // 
+            // FechaNacimiento
+            // 
+            this.FechaNacimiento.DataPropertyName = "FechaNacimiento";
+            this.FechaNacimiento.HeaderText = "Fecha de nacimiento";
+            this.FechaNacimiento.Name = "FechaNacimiento";
+            this.FechaNacimiento.ReadOnly = true;
+            this.FechaNacimiento.Width = 120;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 57;
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "Password";
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
+            this.Password.Visible = false;
+            this.Password.Width = 78;
+            // 
+            // IdTrabajador
+            // 
+            this.IdTrabajador.DataPropertyName = "IdTrabajador";
+            this.IdTrabajador.HeaderText = "IdTrabajador";
+            this.IdTrabajador.Name = "IdTrabajador";
+            this.IdTrabajador.ReadOnly = true;
+            this.IdTrabajador.Visible = false;
+            this.IdTrabajador.Width = 92;
+            // 
+            // IdGradoEstudio
+            // 
+            this.IdGradoEstudio.DataPropertyName = "IdGradoEstudio";
+            this.IdGradoEstudio.HeaderText = "IdGradoEstudio";
+            this.IdGradoEstudio.Name = "IdGradoEstudio";
+            this.IdGradoEstudio.ReadOnly = true;
+            this.IdGradoEstudio.Visible = false;
+            this.IdGradoEstudio.Width = 105;
+            // 
+            // GradoEstudio
+            // 
+            this.GradoEstudio.DataPropertyName = "GradoEstudio";
+            this.GradoEstudio.HeaderText = "Grado de estudio";
+            this.GradoEstudio.Name = "GradoEstudio";
+            this.GradoEstudio.ReadOnly = true;
+            this.GradoEstudio.Width = 104;
+            // 
+            // IdCargo
+            // 
+            this.IdCargo.DataPropertyName = "IdCargo";
+            this.IdCargo.HeaderText = "IdCargo";
+            this.IdCargo.Name = "IdCargo";
+            this.IdCargo.ReadOnly = true;
+            this.IdCargo.Visible = false;
+            this.IdCargo.Width = 69;
+            // 
+            // Cargo
+            // 
+            this.Cargo.DataPropertyName = "Cargo";
+            this.Cargo.HeaderText = "Cargo";
+            this.Cargo.Name = "Cargo";
+            this.Cargo.ReadOnly = true;
+            this.Cargo.Width = 60;
+            // 
+            // TituloAcademico
+            // 
+            this.TituloAcademico.DataPropertyName = "TituloAcademico";
+            this.TituloAcademico.HeaderText = "Titulo académico";
+            this.TituloAcademico.Name = "TituloAcademico";
+            this.TituloAcademico.ReadOnly = true;
+            this.TituloAcademico.Width = 104;
+            // 
+            // Secundaria
+            // 
+            this.Secundaria.DataPropertyName = "Secundaria";
+            this.Secundaria.HeaderText = "Secundaria";
+            this.Secundaria.Name = "Secundaria";
+            this.Secundaria.ReadOnly = true;
+            this.Secundaria.Width = 67;
+            // 
+            // Bachillerato
+            // 
+            this.Bachillerato.DataPropertyName = "Bachillerato";
+            this.Bachillerato.HeaderText = "Bachillerato";
+            this.Bachillerato.Name = "Bachillerato";
+            this.Bachillerato.ReadOnly = true;
+            this.Bachillerato.Width = 68;
+            // 
+            // UsuarioSistema
+            // 
+            this.UsuarioSistema.DataPropertyName = "UsuarioSistema";
+            this.UsuarioSistema.HeaderText = "Es usuario del sistema";
+            this.UsuarioSistema.Name = "UsuarioSistema";
+            this.UsuarioSistema.ReadOnly = true;
+            this.UsuarioSistema.Width = 74;
+            // 
+            // UsuarioActivo
+            // 
+            this.UsuarioActivo.DataPropertyName = "UsuarioActivo";
+            this.UsuarioActivo.HeaderText = "UsuarioActivo";
+            this.UsuarioActivo.Name = "UsuarioActivo";
+            this.UsuarioActivo.ReadOnly = true;
+            this.UsuarioActivo.Visible = false;
+            this.UsuarioActivo.Width = 79;
+            // 
+            // Activo
+            // 
+            this.Activo.DataPropertyName = "Activo";
+            this.Activo.HeaderText = "Activo";
+            this.Activo.Name = "Activo";
+            this.Activo.ReadOnly = true;
+            this.Activo.Visible = false;
+            this.Activo.Width = 43;
             // 
             // bnDatos
             // 
@@ -751,188 +937,12 @@
             // 
             this.sexoTableAdapter.ClearBeforeFill = true;
             // 
-            // IdUsuario
-            // 
-            this.IdUsuario.DataPropertyName = "IdUsuario";
-            this.IdUsuario.HeaderText = "IdUsuario";
-            this.IdUsuario.Name = "IdUsuario";
-            this.IdUsuario.ReadOnly = true;
-            this.IdUsuario.Width = 77;
-            // 
-            // IdRol
-            // 
-            this.IdRol.DataPropertyName = "IdRol";
-            this.IdRol.HeaderText = "IdRol";
-            this.IdRol.Name = "IdRol";
-            this.IdRol.ReadOnly = true;
-            this.IdRol.Width = 57;
-            // 
-            // Rol
-            // 
-            this.Rol.DataPropertyName = "Rol";
-            this.Rol.HeaderText = "Rol";
-            this.Rol.Name = "Rol";
-            this.Rol.ReadOnly = true;
-            this.Rol.Width = 48;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 69;
-            // 
-            // PrimerApellido
-            // 
-            this.PrimerApellido.DataPropertyName = "PrimerApellido";
-            this.PrimerApellido.HeaderText = "PrimerApellido";
-            this.PrimerApellido.Name = "PrimerApellido";
-            this.PrimerApellido.ReadOnly = true;
-            this.PrimerApellido.Width = 98;
-            // 
-            // SegundoApellido
-            // 
-            this.SegundoApellido.DataPropertyName = "SegundoApellido";
-            this.SegundoApellido.HeaderText = "SegundoApellido";
-            this.SegundoApellido.Name = "SegundoApellido";
-            this.SegundoApellido.ReadOnly = true;
-            this.SegundoApellido.Width = 112;
-            // 
-            // IdSexo
-            // 
-            this.IdSexo.DataPropertyName = "IdSexo";
-            this.IdSexo.HeaderText = "IdSexo";
-            this.IdSexo.Name = "IdSexo";
-            this.IdSexo.ReadOnly = true;
-            this.IdSexo.Width = 65;
-            // 
-            // Sexo
-            // 
-            this.Sexo.DataPropertyName = "Sexo";
-            this.Sexo.HeaderText = "Sexo";
-            this.Sexo.Name = "Sexo";
-            this.Sexo.ReadOnly = true;
-            this.Sexo.Width = 56;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 57;
-            // 
-            // Password
-            // 
-            this.Password.DataPropertyName = "Password";
-            this.Password.HeaderText = "Password";
-            this.Password.Name = "Password";
-            this.Password.ReadOnly = true;
-            this.Password.Width = 78;
-            // 
-            // UsuarioSistema
-            // 
-            this.UsuarioSistema.DataPropertyName = "UsuarioSistema";
-            this.UsuarioSistema.HeaderText = "UsuarioSistema";
-            this.UsuarioSistema.Name = "UsuarioSistema";
-            this.UsuarioSistema.ReadOnly = true;
-            this.UsuarioSistema.Width = 86;
-            // 
-            // IdTrabajador
-            // 
-            this.IdTrabajador.DataPropertyName = "IdTrabajador";
-            this.IdTrabajador.HeaderText = "IdTrabajador";
-            this.IdTrabajador.Name = "IdTrabajador";
-            this.IdTrabajador.ReadOnly = true;
-            this.IdTrabajador.Width = 92;
-            // 
-            // IdGradoEstudio
-            // 
-            this.IdGradoEstudio.DataPropertyName = "IdGradoEstudio";
-            this.IdGradoEstudio.HeaderText = "IdGradoEstudio";
-            this.IdGradoEstudio.Name = "IdGradoEstudio";
-            this.IdGradoEstudio.ReadOnly = true;
-            this.IdGradoEstudio.Width = 105;
-            // 
-            // GradoEstudio
-            // 
-            this.GradoEstudio.DataPropertyName = "GradoEstudio";
-            this.GradoEstudio.HeaderText = "GradoEstudio";
-            this.GradoEstudio.Name = "GradoEstudio";
-            this.GradoEstudio.ReadOnly = true;
-            this.GradoEstudio.Width = 96;
-            // 
-            // IdCargo
-            // 
-            this.IdCargo.DataPropertyName = "IdCargo";
-            this.IdCargo.HeaderText = "IdCargo";
-            this.IdCargo.Name = "IdCargo";
-            this.IdCargo.ReadOnly = true;
-            this.IdCargo.Width = 69;
-            // 
-            // Cargo
-            // 
-            this.Cargo.DataPropertyName = "Cargo";
-            this.Cargo.HeaderText = "Cargo";
-            this.Cargo.Name = "Cargo";
-            this.Cargo.ReadOnly = true;
-            this.Cargo.Width = 60;
-            // 
-            // TituloAcademico
-            // 
-            this.TituloAcademico.DataPropertyName = "TituloAcademico";
-            this.TituloAcademico.HeaderText = "TituloAcademico";
-            this.TituloAcademico.Name = "TituloAcademico";
-            this.TituloAcademico.ReadOnly = true;
-            this.TituloAcademico.Width = 111;
-            // 
-            // FechaNacimiento
-            // 
-            this.FechaNacimiento.DataPropertyName = "FechaNacimiento";
-            this.FechaNacimiento.HeaderText = "FechaNacimiento";
-            this.FechaNacimiento.Name = "FechaNacimiento";
-            this.FechaNacimiento.ReadOnly = true;
-            this.FechaNacimiento.Width = 115;
-            // 
-            // Secundaria
-            // 
-            this.Secundaria.DataPropertyName = "Secundaria";
-            this.Secundaria.HeaderText = "Secundaria";
-            this.Secundaria.Name = "Secundaria";
-            this.Secundaria.ReadOnly = true;
-            this.Secundaria.Width = 67;
-            // 
-            // Bachillerato
-            // 
-            this.Bachillerato.DataPropertyName = "Bachillerato";
-            this.Bachillerato.HeaderText = "Bachillerato";
-            this.Bachillerato.Name = "Bachillerato";
-            this.Bachillerato.ReadOnly = true;
-            this.Bachillerato.Width = 68;
-            // 
-            // UsuarioActivo
-            // 
-            this.UsuarioActivo.DataPropertyName = "UsuarioActivo";
-            this.UsuarioActivo.HeaderText = "UsuarioActivo";
-            this.UsuarioActivo.Name = "UsuarioActivo";
-            this.UsuarioActivo.ReadOnly = true;
-            this.UsuarioActivo.Width = 79;
-            // 
-            // Activo
-            // 
-            this.Activo.DataPropertyName = "Activo";
-            this.Activo.HeaderText = "Activo";
-            this.Activo.Name = "Activo";
-            this.Activo.ReadOnly = true;
-            this.Activo.Width = 43;
-            // 
             // fUsuarioTrabajador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(926, 525);
+            this.ClientSize = new System.Drawing.Size(926, 555);
             this.Controls.Add(this.pnlRegistros);
             this.Controls.Add(this.pnlDatos);
             this.Controls.Add(this.pnlBotones);
@@ -1019,23 +1029,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IdUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdRol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrimerApellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn SegundoApellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdSexo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaNacimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn UsuarioSistema;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdTrabajador;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdGradoEstudio;
         private System.Windows.Forms.DataGridViewTextBoxColumn GradoEstudio;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdCargo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
         private System.Windows.Forms.DataGridViewTextBoxColumn TituloAcademico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaNacimiento;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Secundaria;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Bachillerato;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn UsuarioSistema;
         private System.Windows.Forms.DataGridViewCheckBoxColumn UsuarioActivo;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Activo;
     }
