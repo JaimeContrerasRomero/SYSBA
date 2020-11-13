@@ -38,8 +38,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.sp_LoginTableAdapter = new SYSBA.SYSBADataSetTableAdapters.sp_LoginTableAdapter();
+            this.dsDatos = new SYSBA.SYSBADataSet();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEntrar
@@ -114,6 +117,16 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // sp_LoginTableAdapter
+            // 
+            this.sp_LoginTableAdapter.ClearBeforeFill = true;
+            // 
+            // dsDatos
+            // 
+            this.dsDatos.DataSetName = "SYSBADataSet";
+            this.dsDatos.EnforceConstraints = false;
+            this.dsDatos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,6 +149,7 @@
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,5 +164,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private SYSBADataSetTableAdapters.sp_LoginTableAdapter sp_LoginTableAdapter;
+        private SYSBADataSet dsDatos;
     }
 }

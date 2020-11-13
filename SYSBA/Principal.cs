@@ -1,4 +1,5 @@
 ﻿using SYSBA.Catalogos;
+using SYSBA.Modulos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -76,14 +77,57 @@ namespace SYSBA
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void Principal_Load(object sender, EventArgs e)
         {
+            this.lblUsuario.Text = this.NombreCompleto + " - " + this.Rol + " ";
+            foreach (Control cntrl in this.Controls)
+            {
+                if (cntrl is MdiClient)
+                {
+                    cntrl.BackColor = this.BackColor;
+                    cntrl.BackgroundImageLayout = ImageLayout.Zoom;
+                    cntrl.BackgroundImage = Properties.Resources.LogoAbierta;
+                }
+            }
+        }
+
+        private void btnCerrarSesion_ButtonClick(object sender, EventArgs e)
+        {
+            Login l = new Login();
+            this.Hide();
+            l.ShowDialog();
+            this.Close();
+        }
+
+        private void Principal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnGruposSec_Click(object sender, EventArgs e)
+        {
+            fGrupo x = new fGrupo();
+            x.MdiParent = this;
+            x.vBachillerato = false;
+            x.vSecundaria = true;
+            x.Show();
+        }
+
+        private void btnExpedienteTrabajador_Click(object sender, EventArgs e)
+        {
 
         }
 
-        
+        private void btnAlumnos_Click(object sender, EventArgs e)
+        {
+            fAlumno x = new fAlumno();
+            x.MdiParent = this;
+            x.vBachillerato = false;
+            x.vSecundaria = true;
+            x.Show();
+        }
     }
 }

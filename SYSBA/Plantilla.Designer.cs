@@ -52,6 +52,7 @@
             this.txtBuscar = new System.Windows.Forms.ToolStripTextBox();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.bsDatos = new System.Windows.Forms.BindingSource(this.components);
             this.pnlBotones.SuspendLayout();
             this.pnlDatos.SuspendLayout();
             this.pnlRegistros.SuspendLayout();
@@ -59,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bnDatos)).BeginInit();
             this.bnDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBotones
@@ -142,9 +144,11 @@
             this.dgvDatos.AllowUserToAddRows = false;
             this.dgvDatos.AllowUserToDeleteRows = false;
             this.dgvDatos.AllowUserToOrderColumns = true;
+            this.dgvDatos.AutoGenerateColumns = false;
             this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvDatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.DataSource = this.bsDatos;
             this.dgvDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDatos.Location = new System.Drawing.Point(0, 25);
             this.dgvDatos.Name = "dgvDatos";
@@ -156,6 +160,7 @@
             // bnDatos
             // 
             this.bnDatos.AddNewItem = null;
+            this.bnDatos.BindingSource = this.bsDatos;
             this.bnDatos.CountItem = this.bindingNavigatorCountItem;
             this.bnDatos.DeleteItem = null;
             this.bnDatos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -215,7 +220,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -252,7 +256,6 @@
             // txtBuscar
             // 
             this.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(300, 25);
             // 
@@ -290,6 +293,7 @@
             this.bnDatos.ResumeLayout(false);
             this.bnDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsDatos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -318,5 +322,6 @@
         private System.Windows.Forms.ToolStripTextBox txtBuscar;
         private System.Windows.Forms.ToolStripButton btnBuscar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.BindingSource bsDatos;
     }
 }

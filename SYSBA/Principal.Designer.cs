@@ -41,9 +41,10 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.mSecundaria = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnCompras = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnVentas = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAbonos = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnExpedienteTrabajador = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGruposSec = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAlumnos = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnExpedienteAlumno = new System.Windows.Forms.ToolStripMenuItem();
             this.mBachillerato = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBaseDatos = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -163,35 +164,46 @@
             // mSecundaria
             // 
             this.mSecundaria.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnCompras,
-            this.btnVentas,
-            this.btnAbonos});
+            this.btnExpedienteTrabajador,
+            this.btnGruposSec,
+            this.btnAlumnos,
+            this.btnExpedienteAlumno});
             this.mSecundaria.Name = "mSecundaria";
             this.mSecundaria.Size = new System.Drawing.Size(77, 20);
             this.mSecundaria.Text = "&Secundaria";
             // 
-            // btnCompras
+            // btnExpedienteTrabajador
             // 
-            this.btnCompras.Image = ((System.Drawing.Image)(resources.GetObject("btnCompras.Image")));
-            this.btnCompras.ImageTransparentColor = System.Drawing.Color.Black;
-            this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(190, 22);
-            this.btnCompras.Text = "&Expediente Trabajador";
+            this.btnExpedienteTrabajador.Image = ((System.Drawing.Image)(resources.GetObject("btnExpedienteTrabajador.Image")));
+            this.btnExpedienteTrabajador.ImageTransparentColor = System.Drawing.Color.Black;
+            this.btnExpedienteTrabajador.Name = "btnExpedienteTrabajador";
+            this.btnExpedienteTrabajador.Size = new System.Drawing.Size(190, 22);
+            this.btnExpedienteTrabajador.Text = "&Expediente Trabajador";
+            this.btnExpedienteTrabajador.Click += new System.EventHandler(this.btnExpedienteTrabajador_Click);
             // 
-            // btnVentas
+            // btnGruposSec
             // 
-            this.btnVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnVentas.Image")));
-            this.btnVentas.ImageTransparentColor = System.Drawing.Color.Black;
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(190, 22);
-            this.btnVentas.Text = "&Ventas";
+            this.btnGruposSec.Image = ((System.Drawing.Image)(resources.GetObject("btnGruposSec.Image")));
+            this.btnGruposSec.Name = "btnGruposSec";
+            this.btnGruposSec.Size = new System.Drawing.Size(190, 22);
+            this.btnGruposSec.Text = "Grupos";
+            this.btnGruposSec.Click += new System.EventHandler(this.btnGruposSec_Click);
             // 
-            // btnAbonos
+            // btnAlumnos
             // 
-            this.btnAbonos.Image = ((System.Drawing.Image)(resources.GetObject("btnAbonos.Image")));
-            this.btnAbonos.Name = "btnAbonos";
-            this.btnAbonos.Size = new System.Drawing.Size(190, 22);
-            this.btnAbonos.Text = "&Abonos";
+            this.btnAlumnos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlumnos.Image")));
+            this.btnAlumnos.ImageTransparentColor = System.Drawing.Color.Black;
+            this.btnAlumnos.Name = "btnAlumnos";
+            this.btnAlumnos.Size = new System.Drawing.Size(190, 22);
+            this.btnAlumnos.Text = "&Alumnos";
+            this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
+            // 
+            // btnExpedienteAlumno
+            // 
+            this.btnExpedienteAlumno.Image = ((System.Drawing.Image)(resources.GetObject("btnExpedienteAlumno.Image")));
+            this.btnExpedienteAlumno.Name = "btnExpedienteAlumno";
+            this.btnExpedienteAlumno.Size = new System.Drawing.Size(190, 22);
+            this.btnExpedienteAlumno.Text = "&Expediente Alumnos";
             // 
             // mBachillerato
             // 
@@ -260,10 +272,10 @@
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCerrarSesion,
             this.lblUsuario});
-            this.statusStrip.Location = new System.Drawing.Point(0, 407);
+            this.statusStrip.Location = new System.Drawing.Point(0, 409);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.statusStrip.Size = new System.Drawing.Size(847, 56);
+            this.statusStrip.Size = new System.Drawing.Size(847, 54);
             this.statusStrip.TabIndex = 3;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -274,30 +286,36 @@
             this.btnCerrarSesion.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCerrarSesion.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(66, 54);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(64, 52);
             this.btnCerrarSesion.Text = "toolStripSplitButton1";
             this.btnCerrarSesion.ToolTipText = "Cerrar Sesión";
+            this.btnCerrarSesion.ButtonClick += new System.EventHandler(this.btnCerrarSesion_ButtonClick);
             // 
             // lblUsuario
             // 
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(69, 51);
+            this.lblUsuario.Size = new System.Drawing.Size(69, 49);
             this.lblUsuario.Text = "Usuario";
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::SYSBA.Properties.Resources.LogoAbierta;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(847, 463);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SYSBA";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.Load += new System.EventHandler(this.Principal_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -317,9 +335,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem btnSalir;
         private System.Windows.Forms.ToolStripMenuItem mSecundaria;
-        private System.Windows.Forms.ToolStripMenuItem btnCompras;
-        private System.Windows.Forms.ToolStripMenuItem btnVentas;
-        private System.Windows.Forms.ToolStripMenuItem btnAbonos;
+        private System.Windows.Forms.ToolStripMenuItem btnExpedienteTrabajador;
+        private System.Windows.Forms.ToolStripMenuItem btnAlumnos;
+        private System.Windows.Forms.ToolStripMenuItem btnExpedienteAlumno;
         private System.Windows.Forms.ToolStripMenuItem helpMenu;
         private System.Windows.Forms.ToolStripMenuItem btnRVentas;
         private System.Windows.Forms.ToolStripMenuItem btnRClientes;
@@ -336,5 +354,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnGrado;
         private System.Windows.Forms.ToolStripMenuItem btnEscuelaProcedencia;
         private System.Windows.Forms.ToolStripMenuItem btnDocumentoExpediente;
+        private System.Windows.Forms.ToolStripMenuItem btnGruposSec;
     }
 }

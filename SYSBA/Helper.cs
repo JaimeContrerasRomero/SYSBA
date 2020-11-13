@@ -10,7 +10,7 @@ namespace SYSBA
 {
     public class Helper
     {
-        
+
         public string Modo { get; set; }
 
         public void ModoEdicion(string modo, Panel pnlBotones, Panel pnlRegistros, Panel pnlDatos)
@@ -64,7 +64,8 @@ namespace SYSBA
                 }
                 if (ctl is ComboBox)
                 {
-                    ((ComboBox)ctl).SelectedIndex = 0;
+                    if (((ComboBox)ctl).Items.Count > 0)
+                        ((ComboBox)ctl).SelectedIndex = 0;
                 }
                 if (ctl is RadioButton)
                 {
