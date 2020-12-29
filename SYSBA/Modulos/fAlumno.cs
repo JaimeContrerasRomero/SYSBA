@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +24,8 @@ namespace SYSBA.Modulos
         private int Id { get; set; }
         string Mensaje = "";
         string Titulo = "";
+        public int scan = 0;
+        List<string> file = new List<string>(); //Lista de archivos
         public bool vSecundaria { get; set; }
         public bool vBachillerato { get; set; }
         MessageBoxIcon Icono;
@@ -134,6 +138,176 @@ namespace SYSBA.Modulos
         {
             this.SiguienteAtras(this.tcDatosAlumno.SelectedIndex - 1);
             this.HabilitaBotones();
+        }
+
+        private void btn_insertar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //if (this.txt_nombre_archivo.Text != "TIPO DE DOCUMENTO_SEMESTRE" && this.scan == 1)
+                //{
+
+                //    if (this.txt_nombre_archivo.Text == "FOTO")
+                //        this.establecer_foto();
+                //    else
+                //        this.establecer_documento();
+
+                //}
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+        }
+
+        bool foto = false;
+
+        public void establecer_foto()
+        {
+            foto = false;
+            if (this.dgv_coleccion.RowCount > 0)
+                this.existe_foto();
+
+            if (foto == false)
+            {
+                this.dgv_coleccion.Rows.Add();
+                MemoryStream ms = new MemoryStream();
+                pb_documento.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                byte[] pb_array = ms.ToArray();
+                //this.expedienteDataSet.dt_escaneado.Adddt_escaneadoRow(int.Parse(this.cbo_tipo_documento.SelectedValue.ToString()), 1, this.txt_nombre_archivo.Text, pb_array);
+                //this.txt_nombre_archivo.Text = "TIPO DE DOCUMENTO_SEMESTRE";
+                //this.td = "TIPO DE DOCUMENTO";
+                //this.s = "SEMESTRE";
+                this.scan = 0;
+
+                //this.cbo_semestre_documento.SelectedIndex = -1;
+                this.cbo_tipo_documento.SelectedIndex = -1;
+                //this.dgv_coleccion.Sort(this.nombreDataGridViewTextBoxColumn, ListSortDirection.Ascending);
+                //this.pb_alumno.Image = global::MetroPanelSlide.Properties.Resources.documento1;
+            }
+        }
+
+        public void existe_foto()
+        {
+            for (int index = 0; index < this.dgv_coleccion.Rows.Count; index++)
+            {
+                string nombre = this.dgv_coleccion.Rows[index].Cells[0].Value.ToString();
+
+                if (nombre == "FOTO")
+                {
+                    foto = true;
+                    break;
+                }
+
+            }
+        }
+
+        public void establecer_documento()
+        {
+
+            MemoryStream ms = new MemoryStream();
+            pb_documento.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            byte[] pb_array = ms.ToArray();
+            //this.expedienteDataSet.dt_escaneado.Adddt_escaneadoRow(int.Parse(this.cbo_tipo_documento.SelectedValue.ToString()), 1, this.txt_nombre_archivo.Text, pb_array);
+            //this.txt_nombre_archivo.Text = "TIPO DE DOCUMENTO_SEMESTRE";
+            //this.td = "TIPO DE DOCUMENTO";
+            //this.s = "SEMESTRE";
+            this.scan = 0;
+
+            //this.cbo_semestre_documento.SelectedIndex = -1;
+            this.cbo_tipo_documento.SelectedIndex = -1;
+            //this.dgv_coleccion.Sort(this.nombreDataGridViewTextBoxColumn, ListSortDirection.Ascending);
+            //this.pb_documento.Image = global::MetroPanelSlide.Properties.Resources.documento1;
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
+                this.dgv_coleccion.Rows.Remove(this.dgv_coleccion.CurrentRow);
+            }
+            catch (Exception)
+            {
+                //throw;
+            }
+        }
+
+        private void btnScanner_Click(object sender, EventArgs e)
+        {
+            Scanner documento = new Scanner();
+            if (documento.mensaje == 0)
+            {
+                Image temporal = documento.Scann();
+                if (documento.mensaje == 0)
+                {
+                    this.pb_documento.Image = temporal;
+                    this.scan = 1;
+                }
+            }
+        }
+
+        private void btn_abrir_documento_Click(object sender, EventArgs e)
+        {
+            if (this.lsv_expedientes.SelectedItems.Count > 0)
+            {
+                Process.Start(this.file[this.lsv_expedientes.FocusedItem.Index]);
+            }
+        }
+
+        private void btn_borrar_documento_Click(object sender, EventArgs e)
+        {
+            if (this.lsv_expedientes.SelectedItems.Count > 0)
+            {
+                this.eliminar_archivo();
+            }
+        }
+
+        public void eliminar_archivo()
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show("¿ESTA SEGURO QUE DESEA ELIMINAR EL REGISTRO?", "SDE ", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    global::System.Nullable<int> id;
+                    //this.spTableAdapter.sp_alumno_documento_de(this.file[this.lsv_expedientes.FocusedItem.Index].ToString(), out id);
+
+                    //if (id > 0)
+                    //{
+                    //    File.Delete(this.file[this.lsv_expedientes.FocusedItem.Index].ToString());
+                    //    this.directorio();
+                    //}
+
+                }
+
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void lsv_expedientes_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (this.lsv_expedientes.SelectedItems.Count > 0)
+            {
+                Process.Start(this.file[this.lsv_expedientes.FocusedItem.Index]);
+            }
+        }
+
+        private void lsv_expedientes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return && this.lsv_expedientes.SelectedItems.Count > 0)
+            {
+                Process.Start(this.file[this.lsv_expedientes.FocusedItem.Index]);
+            }
+            else if (e.KeyChar == (char)Keys.Delete && this.lsv_expedientes.SelectedItems.Count > 0)
+            {
+                this.eliminar_archivo();
+            }
         }
     }
 }
